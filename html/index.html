@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <container id="container">
+
+        <div id="torapp" class="torbrowser">
+            <div id="torloaderi" style="display: none;">
+                <div class="torloader"></div>
+            </div>
+            <div class="torheader">
+                <div class="torTab">
+                    <p class="Tab">
+                        <aname id="tabname">Home</aname><a class="torheadera" onclick="ChangePage('Home','tor')"
+                            style="color: white;   margin-left:100px;">✖</a>
+                    </p>
+                </div>
+                <div class="torTab" style="float:right">
+                    <p class="Tab">
+                        <aname class="torheadera" id="tabname2" style="color:white;  font-size: 17px;">Your FC balance: </aname>
+                    </p>
+                </div>
+            </div>
+            <div class="torheaderlightbar">
+                <!--<i class="fa fa-search fa" style="color: white;"></i>-->
+                <i style="color: white; user-select: none">🔍</i>
+                <input class="urlbar" id="taburl" value="Search with DuckDuckGo or enter address" disabled></input>
+                <i style="color: white; user-select: none;" onclick="ChangePage('OnionLinks','tor')">OL</i>
+
+            </div>
+            <div id="pages">
+                <div id="Home">
+                    <img class="torimg" src="./img/torimg.png">
+                    <p class="torconnect">Connect to Tor</p></img>
+                    <p class="torconnectsub">Tor Browser routes your traffic over the Tor Network,<br>run by
+                        thousands of volunteers around the world.
+                    </p>
+
+                    <div class="torbuttons">
+                        <button class="tormainbtn1">Configure Connection...</button>
+                        <button class="tormainbtn2" onclick="ChangePage('OnionLinks','tor')">Connect</button>
+                    </div>
+                    <label>
+                        <input type="checkbox" name="checkbox" value="css" checked />
+                        <p class="allwayssub"> Always connect automatically </p>
+                    </label>
+                    <img class="torbottom" src="./img/torbottom.png"></img>
+                </div>
+
+                <div id="OnionLinks" style="display: none;">
+                    <img class="oltorlinksimg" src="./img/torlinks.png"></img>
+                    <div class="ollinkscontent">
+                        <h2>Navigation:</h2>
+                        <a href="#DarkMail" onclick="ChangePage('DarkMail','tor')"><strong>DarkMail
+                            </strong>d83365468ef4a2d007a96bacc9207c7161c48aa4db27720a032167cd27c3fdd3.onion</a><br>
+                        <a href="#hacking" onclick="ChangePage('hacking','tor')"><strong>Hacking
+                            </strong>d83365468ef4a2d007a96bacc9207c7161c48aa4db27720a032167cd27c3fdd3.onion</a><br>
+                        <a href="#EuroGuns" onclick="ChangePage('EuroGuns','tor')"><strong>EuroGuns
+                            </strong>80466eaad8933d5866081806b9b2a397f89bd6eac6ad38ede95cd496bf187ab6.onion</a><br>
+                        <a href="#hitman" onclick="ChangePage('HitmenForHire','tor')"><strong>Hitman
+                            </strong>3dcc0c045cae7863a63df38dc5624b1b8732c80b3358636901f93126f2c6c766.onion</a><br>
+                        <a href="#FCDesk" onclick="ChangePage('FCDesk','tor')"><strong>FCDesk
+                            </strong>55e44263d0acc81c9493655ebcf6876bda0373745e7cd11d192f8d05af1c732b.onion</a><br>
+                        
+                        <div class="olfoot">OnionLinks - FoxRP</div>
+                    </div>
+                </div>
+
+                <div id="EuroGuns" style="display: none;">
+                    <div class="hitmanheadder" style="  border-bottom: 2px solid #c60000;">
+                        <img src="img/guns.png" style="margin-left: 40px;" onclick="ChangePage('EuroGuns','tor')">
+                        <div style="float:left;" class="hitmanTabs">
+                            <p class="hitmanTab" onclick="ChangePage('EuroGuns','tor')">
+                                <a style="color: white;">HOME</a>
+                            </p>
+                        </div>
+                        <div style="float:right;" class="hitmanTabs">
+                            <p class="hitmanTab" onclick="ChangePage('Products','EuroGuns')">
+                                <a style="color: white;">PRODUCTS</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        here i am charlie
+                    </div>
+                </div>
+                <div id="Products" style="display: none;">
+                    <div class="hitmanheadder" style="  border-bottom: 2px solid #c60000;">
+                        <img src="img/guns.png" style="margin-left: 40px;" onclick="ChangePage('EuroGuns','tor')">
+                        <div style="float:left;" class="hitmanTabs">
+                            <p class="hitmanTab" onclick="ChangePage('EuroGuns','tor')">
+                                <a style="color: white;">HOME</a>
+                            </p>
+                        </div>
+                        <div style="float:right;" class="hitmanTabs">
+                            <p class="hitmanTab" onclick="ChangePage('Products','EuroGuns')">
+                                <a style="color: white;">PRODUCTS</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="DarkMail" style="display: none;">
+                    <h1>DarkMail</h1>
+
+                </div>
+
+                <div id="hacking" style="display: none;">
+                    <h1>hacking</h1>
+                    <button onclick=" ButSTUFF('accesscard',2000) ">KØB</button>
+                    
+                </div>
+
+                <div id="FCDesk" style="display: none;">
+                    <div class="hitmanheadder" style="  border-bottom: 2px solid #f35700;">
+                        <img src="img/FC.png" style="margin-left: -75px;" onclick="ChangePage('FCDesk','tor')">
+                        <div style="float:left;" class="hitmanTabs">
+                            <p class="hitmanTab" onclick="ChangePage('FCDesk','tor')">
+                                <a style="color: white;">HOME</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fccc">
+                        <div class="fccontent">
+                            <h1>Transfer FC</h1>
+                            <div class="fcinputBox">
+                                <input id="fcval" type="text" required="required">
+                                <span>TO</span>
+                            </div>
+                            <div class="fcinputBox">
+                                <input id="fcamt" type="text" required="required">
+                                <span>Amount</span>
+                            </div>
+                            <div class="fcinputBox">
+                                <input id="fcmsg" type="text" required="required">
+                                <span>Message</span>
+                            </div>
+                            <a id="transfer" class="fctransferbtn">Transfer</a>
+                        </div>
+                        <div class="fccontent">
+                            <h1>FC Balance</h1>
+                            <h3 id="fcuserbalance" class="fcexchange">60.205 FC</h3>
+                            <div></div>
+                            <h1>FC Price</h1>
+                            <h3 class="fcexchange">1 FC = <a id="fcexc">169165</a> $:</h3>
+                        </div>
+                    </div>
+                    <div class="footer" style="margin-top: 50px;">
+                        <p>FoxRP - FOXRP</p>
+                    </div>
+                </div>
+                
+
+
+                <div id="HitmenForHire" style="display: none;">
+                    <div class="hitmanheadder">
+                        <div class="hitmanTabs">
+                            <p class="hitmanTab" onclick="ChangePage('Hitmen','hitmanindex')">
+                                <a style="color: white;">HITMEN</a>
+                            </p>
+                        </div>
+                        <img src="img/hitman.png" onclick="ChangePage('HitmenForHire','tor')">
+                        <div style="float:left;" class="hitmanTabs">
+                            <p class="hitmanTab" onclick="ChangePage('HitmenForHire','tor')">
+                                <a style="color: white;">HOME</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div id="hitmanmain">
+                        <h1 class="hitmanmaintitle">GET A <a style="color:#c60000">HITMAN</a> TODAY</h1>
+                        <p class="hitmanmainsub">Let's face it, we've all had a relationship or two that you just wish
+                            would go away, but
+                            didn't know just how to end it. Look no further and let out hitmen take care of the dirty
+                            work for you. To get started, choose a service and one of our highly skilled
+                            and trusted hitmen.
+                            <br>
+                            <br>
+
+                            We have assisted individuals just like you who have been the victim of bullying at
+                            the gym, in the office, or at the club. With a wide variety of solutions available, we
+                            ensure that your situation is resolved accordingly with the proper care and attention it
+                            deserves.
+                        </p>
+                        <div>
+                            <h1 class="hitmanmaintitle">PRICES</h1>
+                            <p class="hitmanpricesub"> Prices may vary based on surveillance, security and the victims
+                                profile.</p>
+                        </div>
+                        <table class="hitmantable">
+                            <thead>
+                                <tr> <!--  -->
+                                    <th style="width:217px">SERVICE</th>
+                                    <th>NICKNAME</th>
+                                    <th>PRICE</th>
+                                    <th>CONTACT</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>I will shoot someone for you.</td>
+                                    <td>"Will"</td>
+                                    <td><a id="hitfc12"></a> FC = <a id="hitfc1"></a>$</td>
+                                    <td><button class="hitbtn" onclick="ChangePage('HitmanResume','hitmanindex','Will')">GET
+                                            NOW</button> </td>
+                                </tr>
+                                <tr>
+                                    <td>I will drive someone down for you.</td>
+                                    <td>"Vald"</td>
+                                    <td><a id="hitfc22"></a> FC = <a id="hitfc2"></a>$</td>
+                                    <td><button class="hitbtn" onclick="ChangePage('HitmanResume','hitmanindex','Vald')">GET
+                                            NOW</button> </td>
+                                </tr>
+                                <tr>
+                                    <td>I will kill someone with a knife for you.</td>
+                                    <td>"Thor"</td>
+                                    <td><a id="hitfc32"></a> FC = <a id="hitfc3"></a>$</td>
+                                    <td><button class="hitbtn" onclick="ChangePage('HitmanResume','hitmanindex','Thor')">GET
+                                            NOW</button> </td>
+                                </tr>
+                                <tr>
+                                    <td>I will kidnap someone for you.</td>
+                                    <td>"Will"</td>
+                                    <td><a id="hitfc42"></a> FC = <a id="hitfc4"></a>$</td>
+                                    <td><button class="hitbtn" onclick="ChangePage('HitmanResume','hitmanindex','Will')">GET
+                                        NOW</button> </td>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="footer" style="margin-top: 210px;">
+                        <p>HitmenForHire - FOXRP</p>
+                    </div>
+                </div>
+                <div id="Hitmen" style="display: none;">
+                    <div class="hitmanheadder">
+                        <div class="hitmanTabs">
+                            <p class="hitmanTab" onclick="ChangePage('Hitmen','hitmanindex')">
+                                <a style="color: white;">HITMEN</a>
+                            </p>
+                        </div>
+                        <img src="img/hitman.png" onclick="ChangePage('HitmenForHire','tor')">
+                        <div style="float:left;" class="hitmanTabs">
+                            <p class="hitmanTab" onclick="ChangePage('HitmenForHire','tor')">
+                                <a style="color: white;">HOME</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="box_main">
+                                    <p class="hitmenname">"Thor"</p>
+                                    <img class="hitmanimg" src="./img/trevor.png">
+                                    <div class="buy_bt"><a
+                                            onclick="ChangePage('HitmanResume','hitmanindex','Thor')">CONTACT</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="box_main">
+                                    <p class="hitmenname">"Vald"</p>
+                                    <img class="hitmanimg" src="./img/franklin.png">
+                                    <div class="buy_bt"><a
+                                            onclick="ChangePage('HitmanResume','hitmanindex','Vald')">CONTACT</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="box_main">
+                                    <p class="hitmenname">"Will"</p>
+                                    <img class="hitmanimg" src="./img/michael.png">
+                                    <div class="buy_bt"><a
+                                            onclick="ChangePage('HitmanResume','hitmanindex','Will')">CONTACT</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <p>HitmenForHire - FOXRP</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="HitmanResume" style="display: none;">
+                    <div class="hitmanheadder">
+                        <div class="hitmanTabs">
+                            <p class="hitmanTab" onclick="ChangePage('Hitmen','hitmanindex')">
+                                <a style="color: white;">HITMEN</a>
+                            </p>
+                        </div>
+                        <img src="img/hitman.png" onclick="ChangePage('HitmenForHire','tor')">
+                        <div style="float:left;" class="hitmanTabs">
+                            <p class="hitmanTab" onclick="ChangePage('HitmenForHire','tor')">
+                                <a style="color: white;">HOME</a>
+                            </p>
+                        </div>
+                    </div>
+                    <h1 class="hitmanmaintitle" style="color:#c60000"><a style="color:white">|</a>IMPORTANT!<a
+                            style="color:white">|</a></h1>
+
+                    <div class="row" style="margin-top:-30px;">
+                        <div class="col-md-4">
+                            <div class="box_main">
+                                <img id="himg" class="hitmanimg">
+                                <div class="reviewtext">
+                                    <strong>Phone: </strong><span id="pnumber"></span><br>
+                                    <strong>Weapons: </strong><span id="weapons"></span><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box_main2">
+                                <p id="hitmandiscription" class="reviewp">.</p>
+                                <div class="boxrows">
+                                    <div class="count-box">
+                                        <i class="bi bi-journal-richtext"></i>
+                                        <span id="hclients">195</span>
+                                        <p>Satisfied Clients</p>
+
+                                    </div>
+                                    <div class="count-box" style="margin-left: 125px;">
+                                        <i class="bi bi-journal-richtext"></i>
+                                        <span id="uclients">5</span>
+                                        <p>Unsatisfied Clients</p>
+                                    </div>
+                                    <div class="count-box" style="margin-left: 275px;">
+                                        <i class="bi bi-journal-richtext"></i>
+                                        <span id="clients">200</span>
+                                        <p>Clients</p>
+                                    </div>
+                                </div>
+                                <button class="contactbutton" onclick="contact('contactbutton');">CONTACT</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <p>HitmenForHire - FOXRP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </container>
+    <script src="./main.js" type="text/javascript"></script>
+</body>
+
+</html>

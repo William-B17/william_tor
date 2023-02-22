@@ -6,10 +6,8 @@ ui_page 'html/index.html'
 
 files {
     'html/index.html',
-    'html/guns.html',
     'html/main.js',
     'html/style.css',
-    'html/guns.css',
     'html/img/*.png',
     'html/img/fonts/*.ttf',
     'html/img/fonts/*.otf',

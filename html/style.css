@@ -14,8 +14,6 @@
   box-sizing: border-box !important;
 }
 
-
-
 .torbrowser {
   position: center;
   width: 711px;
@@ -245,12 +243,19 @@ label > input[type="checkbox"]:checked + *::before {
   color: black;
 }
 
+.cpfooter {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top:200px;
+}
+
 .torloader {
   border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #f35700;
-  border-bottom: 16px solid #f35700;
-  border-left: 16px solid #f3f3f3;
-  border-right: 16px solid #f3f3f3;
+  border-top: 16px solid #8000d7;
+  border-bottom: 16px solid #8000d7;
+  border-left: 16px solid #6400a7;
+  border-right: 16px solid #6400a7;
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -287,9 +292,8 @@ label > input[type="checkbox"]:checked + *::before {
 .olfoot {
   color: rgb(0, 0, 0);
   text-align: center;
-  margin-top:52%;
+  margin-top:45%;
   font-weight: bold;
-
 }
 
 .hitmanheadder {
@@ -319,6 +323,10 @@ label > input[type="checkbox"]:checked + *::before {
   text-align: center;
   text-decoration: none;
   padding: 7px;  
+}
+
+.fixedimg {
+  position: fixed;
 }
 
 .hitmanTabs:hover {
@@ -391,6 +399,8 @@ label > input[type="checkbox"]:checked + *::before {
   background-color: #33323b;
   border-left: #c60000 3px solid;
   border-right: #c60000 3px solid;
+  transition: all 0.3s
+
 }
 
 .row {
@@ -410,6 +420,7 @@ label > input[type="checkbox"]:checked + *::before {
   border: 3px solid #c60000;
   padding: 10px;
   height: 425px;
+  transition: all 0.3s
 
 }
 
@@ -418,11 +429,15 @@ label > input[type="checkbox"]:checked + *::before {
   border: 3px solid #c60000;
   padding: 10px;
   height: 425px;
+  transition: all 0.3s
+
 }
 
 .box_main:hover {
-  background-color: #efe4d1;
+  background-color: #840000;
   border: transparent;
+  transition: all 0.3s
+
 }
 
 .hitmenname {
@@ -467,6 +482,7 @@ label > input[type="checkbox"]:checked + *::before {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  transition: all 0.3s
 
 }
 
@@ -481,11 +497,15 @@ label > input[type="checkbox"]:checked + *::before {
   margin-top: 40px;
   border-radius: 5px;
   user-select:none;
+  transition: all 0.3s
+
 }
 
 .buy_bt a:hover {
   color: #ffffff;
   background-color: #840000;
+  transition: all 0.3s
+
 }
 
 .reviewp {
@@ -605,10 +625,6 @@ label > input[type="checkbox"]:checked + *::before {
 
 
 .hitmantable {
- position: absolute;
- z-index: 2;
- left: 50%;
- transform: translate(-50%,-50%);
  border-collapse: collapse;
  border-spacing: 0;
  box-shadow: 0 2px 15px rgba(64,64,64,.7);
@@ -617,7 +633,6 @@ label > input[type="checkbox"]:checked + *::before {
  margin-left: auto;
  margin-right: auto;
  text-align: left;
- margin-top: 45px;
 }
 
 
@@ -744,6 +759,7 @@ label > input[type="checkbox"]:checked + *::before {
   text-decoration: none;
   text-align: center;
   user-select: none;
+  transition: all 0.3s
 
 }
 .fctransferbtn:hover {
@@ -751,8 +767,319 @@ label > input[type="checkbox"]:checked + *::before {
   background-color: #34323d;
   border-left: #f35700 3px solid;
   border-right: #f35700 3px solid;
+  transition: all 0.3s
+
 }
 .fcexchange {
   margin-top: -29px;
   color:white;
+}
+
+.guns_box_main {
+  width: 100%;
+  border: 3px solid #c60000;
+  padding: 10px;
+  height: 250px;
+
+}
+.guns_box_main:hover {
+  background-color: #840000;
+  border: transparent;
+  padding: 5px 15px;
+  transition: all 0.3s
+}
+
+.gunsreviewtext {
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+  color:#fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+}
+.gunsprice {
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+  color:#fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+}
+.gbuy_bt {
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.gbuy_bt a {
+  width: 100%;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #c60000;
+  padding: 4px 12px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  user-select:none;
+}
+
+.gbuy_bt a:hover {
+  color: #ffffff;
+  background-color: #840000;
+  transition: all 0.3s
+}
+.grow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.selectionimg {
+  height: 250px;
+  transition: all 0.3s
+}
+
+.selectionimg:hover {
+  background-color: #840000;
+  border: 3px solid #840000;
+  height: 275px;
+  transition: all 0.3s
+}
+
+.ammo_box_main {
+  width: 100%;
+  border: 3px solid #c60000;
+  padding: 10px;
+  height: 375px;
+}
+
+.ammo_box_main img {
+  margin-top: 10px;
+}
+
+.ammo_box_main:hover {
+  background-color: #840000;
+  border: transparent;
+  padding: 5px 15px;
+  transition: all 0.3s
+}
+
+.ammobuy_bt {
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 10px;
+}
+
+.ammobuy_bt a {
+  width: 100%;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #c60000;
+  padding: 8px 24px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  user-select:none;
+}
+
+.ammobuy_bt a:hover {
+  color: #ffffff;
+  background-color: #840000;
+  transition: all 0.3s
+}
+
+.darkmailaddressheadder {
+  background-color: #1c1b22;
+  border-bottom: 2px solid #005054;
+  padding-bottom: 5px;
+}
+
+.darkmailaddressheadder a {
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #005054;
+}
+
+.hack_box_main {
+  width: 100%;
+  border: 3px solid #03c300;
+  padding: 10px;
+  height: 200px;
+
+}
+.hack_box_main:hover {
+  background-color: #027200;
+  border: transparent;
+  padding: 5px 15px;
+  transition: all 0.3s
+}
+
+.hackname {
+  width: 100%;
+  font-size: 23px;
+  color: #03c300;
+  text-align: center;
+  margin: 0px;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.hackbuy_bt {
+  width: 100px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.hackbuy_bt a {
+  width: 100%;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #03c300;
+  padding: 4px 12px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 5px;
+  user-select:none;
+}
+
+.hackbuy_bt a:hover {
+  color: #ffffff;
+  background-color: #027200;
+  transition: all 0.3s
+}
+
+
+
+
+.gfcinputBox {
+  position: relative;
+  width: 250px;
+}
+
+.gfcinputBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #1b2b3a;
+  border-radius: 5px;
+  outline: none;
+  color: #fff;
+  transition: 0.5s;
+  font-size: 1em;
+  font-family: 'Convergence', sans-serif;
+
+}
+.gfcinputBox span {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.gfcinputBox input:valid~span,
+.gfcinputBox input:focus~span {
+  color: #f3ff0c;
+  transform: translateX(10px) translateY(-7px);
+  font-size: 0.65em;
+  padding: 0 10px;
+  background: #1b2b3a;
+  border-left: 1px solid #f3ff0c;
+  border-right: 1px solid #f3ff0c;
+  letter-spacing: 0.2em;
+}
+.gfcinputBox:nth-child(3) input:valid~span,
+.gfcinputBox:nth-child(3) input:focus~span {
+  background: #f3ff0c;
+  color: #1b2b3a;
+  border-radius: 2px;
+}
+.gfcinputBox:nth-child(4) input:valid~span,
+.gfcinputBox:nth-child(4) input:focus~span {
+  background: #f3ff0c;
+  color: #1b2b3a;
+  border-radius: 2px;
+}
+.gfcinputBox input:valid,
+.gfcinputBox input:focus {
+  border: 1px solid #f3ff0c;
+
+}
+.gfctransferbtn {
+  color: #1c1b22;
+  background-color: #f3ff0c;
+  transition: .2s ease-in-out;
+  border-left: 3px transparent solid;
+  border-right: 3px transparent solid;
+  width: 250px;
+  padding: 15px 20px;
+
+  font-size: 1em;
+  font-family: 'Convergence', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  user-select: none;
+  transition: all 0.3s
+
+}
+.gfctransferbtn:hover {
+  color: #f3ff0c;
+  background-color: #34323d;
+  border-left: #f3ff0c 3px solid;
+  border-right: #f3ff0c 3px solid;
+  transition: all 0.3s
+
+}
+
+.mailnavbar {
+  overflow: hidden;
+  background-color: #333;
+  border-bottom: 2px solid #005054;
+}
+
+.mailnavbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  user-select: none;
+}
+
+.mailnavbar a:hover {
+  background: #222222;
+  color: #005054;
+}
+
+.mailcontent {
+  margin-top: 30px;
 }

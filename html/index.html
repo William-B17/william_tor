@@ -26,12 +26,12 @@
                 </div>
                 <div class="torTab" style="float:right">
                     <p class="Tab">
-                        <aname class="torheadera" id="tabname2" style="color:white;  font-size: 17px;">Your FC balance: </aname>
+                        <aname class="torheadera" id="tabname2" style="color:white;  font-size: 17px;">Your FC balance:
+                        </aname>
                     </p>
                 </div>
             </div>
             <div class="torheaderlightbar">
-                <!--<i class="fa fa-search fa" style="color: white;"></i>-->
                 <i style="color: white; user-select: none">🔍</i>
                 <input class="urlbar" id="taburl" value="Search with DuckDuckGo or enter address" disabled></input>
                 <i style="color: white; user-select: none;" onclick="ChangePage('OnionLinks','tor')">OL</i>
@@ -60,9 +60,9 @@
                     <img class="oltorlinksimg" src="./img/torlinks.png"></img>
                     <div class="ollinkscontent">
                         <h2>Navigation:</h2>
-                        <a href="#DarkMail" onclick="ChangePage('DarkMail','tor')"><strong>DarkMail
+                        <a href="#DarkMail" onclick="LoadFirstMail();ChangePage('DarkMail','tor')"><strong>DarkMail
                             </strong>d83365468ef4a2d007a96bacc9207c7161c48aa4db27720a032167cd27c3fdd3.onion</a><br>
-                        <a href="#hacking" onclick="ChangePage('hacking','tor')"><strong>Hacking
+                        <a href="#hacking" onclick="ChangePage('Hack & Break','tor')"><strong>Hack & Break
                             </strong>d83365468ef4a2d007a96bacc9207c7161c48aa4db27720a032167cd27c3fdd3.onion</a><br>
                         <a href="#EuroGuns" onclick="ChangePage('EuroGuns','tor')"><strong>EuroGuns
                             </strong>80466eaad8933d5866081806b9b2a397f89bd6eac6ad38ede95cd496bf187ab6.onion</a><br>
@@ -70,64 +70,507 @@
                             </strong>3dcc0c045cae7863a63df38dc5624b1b8732c80b3358636901f93126f2c6c766.onion</a><br>
                         <a href="#FCDesk" onclick="ChangePage('FCDesk','tor')"><strong>FCDesk
                             </strong>55e44263d0acc81c9493655ebcf6876bda0373745e7cd11d192f8d05af1c732b.onion</a><br>
-                        
-                        <div class="olfoot">OnionLinks - FoxRP</div>
+                        <a href="#GetCrypto" onclick="ChangePage('Get Crypto','tor')"><strong>Get Crypto
+                            </strong>183c19fa91e23f95aa7d2fadb63eb9f7fe69a68aff208fda0856b1c810115b4e.onion</a><br>
+                        <a href="#FCC" onclick="getalltransfers();ChangePage('FCTrans','tor')"><strong>FCTrans (a list of all transactions to your account)
+                            </strong>ebe67e24057d60b07e24c4be0c2bc4968011c81ec88bbbbccee0c7ec274545c3.onion</a><br>
+
+                        <div class="olfoot">OnionLinks - WG</div>
                     </div>
                 </div>
 
-                <div id="EuroGuns" style="display: none;">
-                    <div class="hitmanheadder" style="  border-bottom: 2px solid #c60000;">
-                        <img src="img/guns.png" style="margin-left: 40px;" onclick="ChangePage('EuroGuns','tor')">
-                        <div style="float:left;" class="hitmanTabs">
-                            <p class="hitmanTab" onclick="ChangePage('EuroGuns','tor')">
-                                <a style="color: white;">HOME</a>
-                            </p>
-                        </div>
-                        <div style="float:right;" class="hitmanTabs">
-                            <p class="hitmanTab" onclick="ChangePage('Products','EuroGuns')">
-                                <a style="color: white;">PRODUCTS</a>
-                            </p>
-                        </div>
+                <div id="Get Crypto" style="display: none;">
+                    <div class="hitmanheadder" style="  border-bottom: 2px solid #f3ff0c;">
+                        <img src="img/getcrypt.png" onclick="ChangePage('Get Crypto','tor')">
                     </div>
-                    <div>
-                        here i am charlie
+                    <div class="fccc">
+                        <div class="fccontent">
+                            <h1>Get FakeCoin</h1>
+                            <div class="gfcinputBox">
+                                <input onchange="gccalc()" id="gcidolla" type="text" required="required">
+                                <span>What You Pay ($)</span>
+                            </div>
+                            <div class="gfcinputBox">
+                                <input type="text" required="required" disabled>
+                                <span id="gcifc">What You Get (FC)</span>
+                            </div>
+                            <a id="exchangebtn" class="gfctransferbtn">Transfer</a>
+                        </div>
+                        <div class="fccontent">
+                            <h1>Your Balance</h1>
+                            <h3 id="getbankbalance" class="fcexchange">? $</h3>
+                            <h3 id="getfcuserbalance" class="fcexchange">? FC</h3>
+
+                            <div></div>
+                            <h1>FakeCoin/$ Price</h1>
+                            <h3 class="fcexchange">1 FC = <a id="fcexc">169165</a> $</h3>
+                            <h3 class="fcexchange">100$ = <a id="fcexc">0,00059</a> FC</h3>
+                        </div>
                     </div>
                 </div>
-                <div id="Products" style="display: none;">
+                <div id="EuroGuns" style="display: none;">
                     <div class="hitmanheadder" style="  border-bottom: 2px solid #c60000;">
-                        <img src="img/guns.png" style="margin-left: 40px;" onclick="ChangePage('EuroGuns','tor')">
-                        <div style="float:left;" class="hitmanTabs">
-                            <p class="hitmanTab" onclick="ChangePage('EuroGuns','tor')">
-                                <a style="color: white;">HOME</a>
-                            </p>
-                        </div>
-                        <div style="float:right;" class="hitmanTabs">
-                            <p class="hitmanTab" onclick="ChangePage('Products','EuroGuns')">
-                                <a style="color: white;">PRODUCTS</a>
-                            </p>
+                        <img src="img/guns.png" id="gunimg" onclick="ChangePage('EuroGuns','tor')">
+                    </div>
+                    <div class="container" style="position: fixed;">
+                        <div class="row" style="align-items: center;">
+                            <div class="col-md-4">
+                                <div>
+                                    <img onclick="ChangePage('Ammo','EuroGuns')" class="selectionimg"
+                                        src="./img/selectionammo.png">
+                                    <p>
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div>
+                                    <img onclick="ChangePage('Guns','EuroGuns')" class="selectionimg"
+                                        src="./img/selectionguns.png">
+                                    <p>
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="gunslocked" style="display: none;" class="col-md-4">
+                                <div>
+                                    <img class="selectionimg" src="./img/gunslocked.png">
+                                    <p>
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="gunsunlocked" style="display: none;" class="col-md-4">
+                                <div>
+                                    <img onclick="ChangePage('Special Guns','EuroGuns')" class="selectionimg"
+                                        src="./img/hitmangunsselection.png">
+                                    <p>
+
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div id="Guns" style="display: none;">
+                    <div class="hitmanheadder" style="  border-bottom: 2px solid #c60000;">
+                        <img src="img/guns.png" id="gunimg" onclick="ChangePage('EuroGuns','tor')">
+                    </div>
+                    <div>
+                        <div class="container">
+                            <div class="grow">
+                                <div class="col-md-4">
+                                    <div class="guns_box_main">
+                                        <p class="hitmenname">"Heavy Pistol"</p>
+                                        <img class="hitmanimg" style="width:100%" src="./img/a3.png">
+                                        <div class="gunsreviewtext">
+                                            <strong>Damage: </strong>40<br>
+                                            <strong>Fire Rate: </strong>40<br>
+                                            <strong>Accuracy: </strong>50<br>
+                                            <strong>Range: </strong>35<br>
+                                            <strong>Clip size: </strong>18<br>
+                                        </div>
+                                        <div class="gunsprice">
+                                            <strong>Price: </strong>95000 $ = 0,561 FC<br>
+                                        </div>
+                                        <div class="gbuy_bt"><a
+                                                onclick=" ButSTUFF('WEAPON_HEAVYPISTOL','weapon') ">BUY</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="guns_box_main">
+                                        <p class="hitmenname">"Heavy Revolver"</p>
+                                        <img class="hitmanimg" style="width:100%" src="./img/a4.png">
+                                        <div class="gunsreviewtext">
+                                            <strong>Damage: </strong>70<br>
+                                            <strong>Fire Rate: </strong>20<br>
+                                            <strong>Accuracy: </strong>65<br>
+                                            <strong>Range: </strong>35<br>
+                                            <strong>Clip size: </strong>6<br>
+                                        </div>
+                                        <div class="gunsprice">
+                                            <strong>Price: </strong>150000 $ = 0,886 FC<br>
+                                        </div>
+                                        <div class="gbuy_bt"><a
+                                                onclick=" ButSTUFF('WEAPON_REVOLVER','weapon') ">BUY</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="guns_box_main">
+                                        <p class="hitmenname">"Pistol .50"</p>
+                                        <img class="hitmanimg" style="width:100%" src="./img/a7.png">
+                                        <div class="gunsreviewtext">
+                                            <strong>Damage: </strong>51<br>
+                                            <strong>Fire Rate: </strong>40<br>
+                                            <strong>Accuracy: </strong>55<br>
+                                            <strong>Range: </strong>35<br>
+                                            <strong>Clip size: </strong>9<br>
+                                        </div>
+                                        <div class="gunsprice">
+                                            <strong>Price: </strong>90000 $ = 0,532 FC<br>
+                                        </div>
+                                        <div class="gbuy_bt"><a
+                                                onclick=" ButSTUFF('weapon_pistol50','weapon') ">BUY</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="grow">
+                                <div class="col-md-4">
+                                    <div class="guns_box_main">
+                                        <p class="hitmenname">"Pistol"</p>
+                                        <img class="hitmanimg" style="width:100%" src="./img/a8.png">
+                                        <div class="gunsreviewtext">
+                                            <strong>Damage: </strong>26<br>
+                                            <strong>Fire Rate: </strong>40<br>
+                                            <strong>Accuracy: </strong>40<br>
+                                            <strong>Range: </strong>25<br>
+                                            <strong>Clip size: </strong>12<br>
+                                        </div>
+                                        <div class="gunsprice">
+                                            <strong>Price: </strong>75000 $ = 0,443 FC<br>
+                                        </div>
+                                        <div class="gbuy_bt"><a
+                                                onclick=" ButSTUFF('weapon_pistol','weapon') ">BUY</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="guns_box_main">
+                                        <p class="hitmenname">"SNS Pistol"</p>
+                                        <img class="hitmanimg" style="width:100%" src="./img/a11.png">
+                                        <div class="gunsreviewtext">
+                                            <strong>Damage: </strong>30<br>
+                                            <strong>Fire Rate: </strong>40<br>
+                                            <strong>Accuracy: </strong>40<br>
+                                            <strong>Range: </strong>20<br>
+                                            <strong>Clip size: </strong>6<br>
+                                        </div>
+                                        <div class="gunsprice">
+                                            <strong>Price: </strong>65000 $ = 0,384 FC<br>
+                                        </div>
+                                        <div class="gbuy_bt"><a
+                                                onclick=" ButSTUFF('weapon_snspistol','weapon') ">BUY</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="guns_box_main">
+                                        <p class="hitmenname">"Vintage Pistol"</p>
+                                        <img class="hitmanimg" style="width:100%" src="./img/a12.png">
+                                        <div class="gunsreviewtext">
+                                            <strong>Damage: </strong>35<br>
+                                            <strong>Fire Rate: </strong>40<br>
+                                            <strong>Accuracy: </strong>40<br>
+                                            <strong>Range: </strong>25<br>
+                                            <strong>Clip size: </strong>7<br>
+                                        </div>
+                                        <div class="gunsprice">
+                                            <strong>Price: </strong>100000 $ = 0,591 FC<br>
+                                        </div>
+                                        <div class="gbuy_bt"><a
+                                                onclick=" ButSTUFF('WEAPON_VINTAGEPISTOL','weapon') ">BUY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <p>EuroGuns - WG</p>
+                    </div>
+                </div>
+                <div id="Ammo" style="display: none;">
+                    <div class="hitmanheadder" style="  border-bottom: 2px solid #c60000;">
+                        <img src="img/guns.png" id="gunimg" onclick="ChangePage('EuroGuns','tor')">
+                    </div>
+                    <div>
+                        <div class="container">
+                            <div class="grow">
+                                <div class="col-md-4">
+                                    <div class="ammo_box_main">
+                                        <img class="hitmanimg" style="width:100%" src="./img/rifleammo.png">
+                                        <div class="gunsprice">
+                                            <strong>Price: </strong>32000 $ = 0,189 FC<br>
+                                        </div>
+                                        <div class="ammobuy_bt"><a
+                                                onclick="ButSTUFF('weapon_assaultrifle','ammo')">BUY</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="ammo_box_main">
+                                        <img class="hitmanimg" style="width:100%" src="./img/pistolammo.png">
+                                        <div class="gunsprice">
+                                            <strong>Price: </strong>25000 $ = 0,147 FC<br>
+                                        </div>
+                                        <div class="ammobuy_bt"><a
+                                                onclick="ButSTUFF('weapon_pistol','ammo')">BUY</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="ammo_box_main">
+                                        <img class="hitmanimg" style="width:100%" src="./img/shotgunammo.png">
+                                        <div class="gunsprice">
+                                            <strong>Price: </strong>30000 $ = 0,177 FC<br>
+                                        </div>
+                                        <div class="ammobuy_bt"><a
+                                                onclick="ButSTUFF('weapon_pumpshotgun','ammo')">BUY</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <p>EuroGuns - WG</p>
+                    </div>
+                </div>
+                <div id="Special Guns" style="display: none;">
+                    <div class="hitmanheadder" style="  border-bottom: 2px solid #c60000;">
+                        <img src="img/guns.png" id="gunimg" onclick="ChangePage('EuroGuns','tor')">
+                    </div>
+                    <div class="container">
+                        <div class="grow">
+                            <div class="col-md-4">
+                                <div class="guns_box_main">
+                                    <p class="hitmenname">"Assult Rifle"</p>
+                                    <img class="hitmanimg" style="width:100%" src="./img/a1.png">
+                                    <div class="gunsreviewtext">
+                                        <strong>Damage: </strong>30<br>
+                                        <strong>Fire Rate: </strong>60<br>
+                                        <strong>Accuracy: </strong>45<br>
+                                        <strong>Range: </strong>45<br>
+                                        <strong>Clip size: </strong>30<br>
+                                    </div>
+                                    <div class="gunsprice">
+                                        <strong>Price: </strong>500000 $ = 2,955 FC<br>
+                                    </div>
+                                    <div class="gbuy_bt"><a onclick=" ButSTUFF('weapon_assaultrifle','weapon') ">BUY</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="guns_box_main">
+                                    <p class="hitmenname">"Pump Shotgun"</p>
+                                    <img class="hitmanimg" style="width:100%" src="./img/a9.png">
+                                    <div class="gunsreviewtext">
+                                        <strong>Damage: </strong>67<br>
+                                        <strong>Fire Rate: </strong>20<br>
+                                        <strong>Accuracy: </strong>30<br>
+                                        <strong>Range: </strong>20<br>
+                                        <strong>Clip size: </strong>8<br>
+                                    </div>
+                                    <div class="gunsprice">
+                                        <strong>Price: </strong>250000 $ = 1,4778 FC<br>
+                                    </div>
+                                    <div class="gbuy_bt"><a onclick=" ButSTUFF('weapon_pumpshotgun','weapon') ">BUY</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="guns_box_main">
+                                    <p class="hitmenname">"Sniper Rifle"</p>
+                                    <img class="hitmanimg" style="width:100%" src="./img/a10.png">
+                                    <div class="gunsreviewtext">
+                                        <strong>Damage: </strong>96<br>
+                                        <strong>Fire Rate: </strong>25<br>
+                                        <strong>Accuracy: </strong>70<br>
+                                        <strong>Range: </strong>96<br>
+                                        <strong>Clip size: </strong>10<br>
+                                    </div>
+                                    <div class="gunsprice">
+                                        <strong>Price: </strong>300000 $ = 1,773 FC<br>
+                                    </div>
+                                    <div class="gbuy_bt"><a onclick="ButSTUFF('weapon_sniperrifle','weapon')">BUY</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="grow">
+                            <div class="col-md-4">
+                                <div class="guns_box_main">
+                                    <p class="hitmenname">"Machine Pistol"</p>
+                                    <img class="hitmanimg" style="width:100%" src="./img/a5.png">
+                                    <div class="gunsreviewtext">
+                                        <strong>Damage: </strong>28<br>
+                                        <strong>Fire Rate: </strong>70<br>
+                                        <strong>Accuracy: </strong>40<br>
+                                        <strong>Range: </strong>30<br>
+                                        <strong>Clip size: </strong>12<br>
+                                    </div>
+                                    <div class="gunsprice">
+                                        <strong>Price: </strong>350000 $ = 2,068 FC<br>
+                                    </div>
+                                    <div class="gbuy_bt"><a onclick="ButSTUFF('weapon_machinepistol','weapon')">BUY</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="guns_box_main">
+                                    <p class="hitmenname">SMG Ammo</p>
+                                    <img class="hitmanimg" style="width:100%" src="./img/a2.png">
+                                    <div class="gunsprice">
+                                        <strong>Price: </strong>31000 $ = 0.1832 FC<br>
+                                    </div>
+                                    <div class="gbuy_bt"><a onclick="ButSTUFF('weapon_smg','ammo')">BUY</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="guns_box_main">
+                                    <p class="hitmenname">SNIPER Ammo</p>
+                                    <img class="hitmanimg" style="width:100%" src="./img/a6.png">
+                                    <div class="gunsprice">
+                                        <strong>Price: </strong>35000 $ = 0,206 FC<br>
+                                    </div>
+                                    <div class="gbuy_bt"><a onclick="ButSTUFF('weapon_sniperrifle','ammo')">BUY</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <p>EuroGuns - WG</p>
+                    </div>
+                </div>
+
+                <div id="FCTrans" style="display: none">
+                    <div class="hitmanheadder">
+                        <img src="img/darkmail.png" onclick="ChangePage('DarkMail','tor')">
+                    </div>
+                    <table class="hitmantable" style="margin-top: 50px;">
+                        <thead>
+                            <tr> <!--  -->
+                                <th>FROM</th>
+                                <th>MESSAGE</th>
+                                <th>AMOUNT</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fctranstable">
+                        </tbody>
+                    </table>
+                    <!--table class="hitmantable" style="margin-top: 50px;">
+                        <thead>
+                            <tr>
+                                <th>FROM</th>
+                                <th>MESSAGE</th>
+                                <th>AMOUNT</th>
+                            </tr>
+                        </thead>
+                        <tbody id="fctranstable">
+                            
+                        </tbody>
+                    </table-->
                 </div>
 
                 <div id="DarkMail" style="display: none;">
-                    <h1>DarkMail</h1>
-
+                    <div class="hitmanheadder">
+                        <img src="img/darkmail.png" onclick="ChangePage('DarkMail','tor')">
+                    </div>
+                    <div class="darkmailaddressheadder">
+                        <a id="myaddress">My address: NILL</a>
+                    </div>
+                    <div class="mailnavbar">
+                        <a onclick="ChangePage('DarkMail | Write','tor')">WriteMail</a>
+                        <a onclick="DeleteMail()">Delete</a>
+                        <a onclick="ChangeMail()">Next</a>
+                    </div>
+                    <div id="mailexsist" class="mailcontent">
+                        <p>From: <a id="mailaddress"></a></p>
+                        <p>Message: <a id="mailcontent"></a></p>
+                    </div>
+                </div>
+                <div id="DarkMail | Write" style="display:none">
+                    <div class="hitmanheadder">
+                        <img src="img/darkmail.png" onclick="ChangePage('DarkMail','tor')">
+                    </div>
+                    <div class="darkmailaddressheadder">
+                        <a id="myaddress2">My address: NILL</a>
+                    </div>
+                    <div class="mailnavbar">
+                        <a onclick="ChangePage('DarkMail','tor')">DarkMail</a>
+                        <a onclick="SetMailWriteVals('','');ChangePage('DarkMail | Write','tor')">Refresh</a>
+                    </div>
+                    <div>
+                        <input id="writemailaddress"></input>
+                        <input id="writemailmessage"></input>
+                        <button id="writebtn">Send</button>
+                    </div>
+                    
                 </div>
 
-                <div id="hacking" style="display: none;">
-                    <h1>hacking</h1>
-                    <button onclick=" ButSTUFF('accesscard',2000) ">KØB</button>
-                    
+                <div id="Hack & Break" style="display: none;">
+                    <div class="hitmanheadder" style="  border-bottom: 2px solid #03c300;">
+                        <img src="img/hackandbreak.png" onclick="ChangePage('Hack & Break','tor')">
+                    </div>
+                    <div class="container">
+                        <div class="grow">
+                            <div class="col-md-4">
+                                <div class="hack_box_main">
+                                    <p class="hackname">Hacker Device</p>
+                                    <img class="hitmanimg" style="width:100%" src="./img/hackerdevice.png">
+                                    <div class="gunsprice">
+                                        <strong>Price: </strong>1500 $ = 0,0088 FC<br>
+                                    </div>
+                                    <div class="hackbuy_bt"><a
+                                            onclick=" ButSTUFF('hackerDevice','item') ">BUY</a></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="hack_box_main">
+                                    <p class="hackname">Lock Pick V1</p>
+                                    <img class="hitmanimg" style="width:100%" src="./img/lockpick.png">
+                                    <div class="gunsprice">
+                                        <strong>Price: </strong>500 $ = 0,0029 FC<br>
+                                    </div>
+                                    <div class="hackbuy_bt"><a onclick=" ButSTUFF('lockpick','item') ">BUY</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="hack_box_main">
+                                    <p class="hackname">Lock Pick V2</p>
+                                    <img class="hitmanimg" style="width:100%" src="./img/adlockpick.png">
+                                    <div class="gunsprice">
+                                        <strong>Price: </strong>1000 $ = 0,0059 FC<br>
+                                    </div>
+                                    <div class="hackbuy_bt"><a
+                                            onclick=" ButSTUFF('advancedlockpick','item') ">BUY</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="grow">
+                            <div class="col-md-4">
+                                <div class="hack_box_main">
+                                    <p class="hackname">C4</p>
+                                    <img class="hitmanimg" style="width:100%" src="./img/c4.png">
+                                    <div class="gunsprice">
+                                        <strong>Price: </strong>7500 $ = 0,0443 FC<br>
+                                    </div>
+                                    <div class="hackbuy_bt"><a onclick=" ButSTUFF('bank_c4','item') ">BUY</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="hack_box_main">
+                                    <p class="hackname">Blow Torch</p>
+                                    <img class="hitmanimg" style="width:100%" src="./img/blowtorch.png">
+                                    <div class="gunsprice">
+                                        <strong>Price: </strong>2000 $ = 0,0118 FC<br>
+                                    </div>
+                                    <div class="hackbuy_bt"><a onclick=" ButSTUFF('blowpipe','item') ">BUY</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style=" margin-top: 10px; border-bottom: 2px solid #03c300;"></div>
+                    <div class="footer">
+                        <p>Hack & Break - WG</p>
+                    </div>
+                    <!--button onclick=" ButSTUFF('accesscard','item',0.2) ">KØB</button-->
+
                 </div>
 
                 <div id="FCDesk" style="display: none;">
                     <div class="hitmanheadder" style="  border-bottom: 2px solid #f35700;">
-                        <img src="img/FC.png" style="margin-left: -75px;" onclick="ChangePage('FCDesk','tor')">
-                        <div style="float:left;" class="hitmanTabs">
-                            <p class="hitmanTab" onclick="ChangePage('FCDesk','tor')">
-                                <a style="color: white;">HOME</a>
-                            </p>
-                        </div>
+                        <img src="img/FC.png" onclick="ChangePage('FCDesk','tor')">
                     </div>
                     <div class="fccc">
                         <div class="fccontent">
@@ -147,18 +590,17 @@
                             <a id="transfer" class="fctransferbtn">Transfer</a>
                         </div>
                         <div class="fccontent">
-                            <h1>FC Balance</h1>
+                            <h1>Your FC Balance</h1>
                             <h3 id="fcuserbalance" class="fcexchange">60.205 FC</h3>
-                            <div></div>
                             <h1>FC Price</h1>
-                            <h3 class="fcexchange">1 FC = <a id="fcexc">169165</a> $:</h3>
+                            <h3 class="fcexchange">1 FC = <a id="fcexc">169165</a> $</h3>
                         </div>
                     </div>
                     <div class="footer" style="margin-top: 50px;">
-                        <p>FoxRP - FOXRP</p>
+                        <p>FakeCoin Desk - WG</p>
                     </div>
                 </div>
-                
+
 
 
                 <div id="HitmenForHire" style="display: none;">
@@ -168,12 +610,7 @@
                                 <a style="color: white;">HITMEN</a>
                             </p>
                         </div>
-                        <img src="img/hitman.png" onclick="ChangePage('HitmenForHire','tor')">
-                        <div style="float:left;" class="hitmanTabs">
-                            <p class="hitmanTab" onclick="ChangePage('HitmenForHire','tor')">
-                                <a style="color: white;">HOME</a>
-                            </p>
-                        </div>
+                        <img class="fixedimg" src="img/hitman.png" onclick="ChangePage('HitmenForHire','tor')">
                     </div>
                     <div id="hitmanmain">
                         <h1 class="hitmanmaintitle">GET A <a style="color:#c60000">HITMAN</a> TODAY</h1>
@@ -195,7 +632,7 @@
                             <p class="hitmanpricesub"> Prices may vary based on surveillance, security and the victims
                                 profile.</p>
                         </div>
-                        <table class="hitmantable">
+                        <table class="hitmantable" style="margin-top: -45px;">
                             <thead>
                                 <tr> <!--  -->
                                     <th style="width:217px">SERVICE</th>
@@ -209,36 +646,40 @@
                                     <td>I will shoot someone for you.</td>
                                     <td>"Will"</td>
                                     <td><a id="hitfc12"></a> FC = <a id="hitfc1"></a>$</td>
-                                    <td><button class="hitbtn" onclick="ChangePage('HitmanResume','hitmanindex','Will')">GET
+                                    <td><button class="hitbtn"
+                                            onclick="ChangePage('HitmanResume','hitmanindex','Will')">GET
                                             NOW</button> </td>
                                 </tr>
                                 <tr>
                                     <td>I will drive someone down for you.</td>
                                     <td>"Vald"</td>
                                     <td><a id="hitfc22"></a> FC = <a id="hitfc2"></a>$</td>
-                                    <td><button class="hitbtn" onclick="ChangePage('HitmanResume','hitmanindex','Vald')">GET
+                                    <td><button class="hitbtn"
+                                            onclick="ChangePage('HitmanResume','hitmanindex','Vald')">GET
                                             NOW</button> </td>
                                 </tr>
                                 <tr>
                                     <td>I will kill someone with a knife for you.</td>
                                     <td>"Thor"</td>
                                     <td><a id="hitfc32"></a> FC = <a id="hitfc3"></a>$</td>
-                                    <td><button class="hitbtn" onclick="ChangePage('HitmanResume','hitmanindex','Thor')">GET
+                                    <td><button class="hitbtn"
+                                            onclick="ChangePage('HitmanResume','hitmanindex','Thor')">GET
                                             NOW</button> </td>
                                 </tr>
                                 <tr>
                                     <td>I will kidnap someone for you.</td>
                                     <td>"Will"</td>
                                     <td><a id="hitfc42"></a> FC = <a id="hitfc4"></a>$</td>
-                                    <td><button class="hitbtn" onclick="ChangePage('HitmanResume','hitmanindex','Will')">GET
-                                        NOW</button> </td>
+                                    <td><button class="hitbtn"
+                                            onclick="ChangePage('HitmanResume','hitmanindex','Will')">GET
+                                            NOW</button> </td>
 
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-                    <div class="footer" style="margin-top: 210px;">
-                        <p>HitmenForHire - FOXRP</p>
+                    <div class="footer">
+                        <p>HitmenForHire - WG</p>
                     </div>
                 </div>
                 <div id="Hitmen" style="display: none;">
@@ -248,12 +689,7 @@
                                 <a style="color: white;">HITMEN</a>
                             </p>
                         </div>
-                        <img src="img/hitman.png" onclick="ChangePage('HitmenForHire','tor')">
-                        <div style="float:left;" class="hitmanTabs">
-                            <p class="hitmanTab" onclick="ChangePage('HitmenForHire','tor')">
-                                <a style="color: white;">HOME</a>
-                            </p>
-                        </div>
+                        <img class="fixedimg" src="img/hitman.png" onclick="ChangePage('HitmenForHire','tor')">
                     </div>
                     <div class="container">
                         <div class="row">
@@ -283,7 +719,7 @@
                             </div>
                         </div>
                         <div class="footer">
-                            <p>HitmenForHire - FOXRP</p>
+                            <p>HitmenForHire - WG</p>
                         </div>
                     </div>
                 </div>
@@ -294,12 +730,7 @@
                                 <a style="color: white;">HITMEN</a>
                             </p>
                         </div>
-                        <img src="img/hitman.png" onclick="ChangePage('HitmenForHire','tor')">
-                        <div style="float:left;" class="hitmanTabs">
-                            <p class="hitmanTab" onclick="ChangePage('HitmenForHire','tor')">
-                                <a style="color: white;">HOME</a>
-                            </p>
-                        </div>
+                        <img class="fixedimg" src="img/hitman.png" onclick="ChangePage('HitmenForHire','tor')">
                     </div>
                     <h1 class="hitmanmaintitle" style="color:#c60000"><a style="color:white">|</a>IMPORTANT!<a
                             style="color:white">|</a></h1>
@@ -309,7 +740,7 @@
                             <div class="box_main">
                                 <img id="himg" class="hitmanimg">
                                 <div class="reviewtext">
-                                    <strong>Phone: </strong><span id="pnumber"></span><br>
+                                    <strong>Mail Address: </strong><span id="address"></span><br>
                                     <strong>Weapons: </strong><span id="weapons"></span><br>
                                 </div>
                             </div>
@@ -335,16 +766,17 @@
                                         <p>Clients</p>
                                     </div>
                                 </div>
-                                <button class="contactbutton" onclick="contact('contactbutton');">CONTACT</button>
+                                <button id="contactbutton" class="contactbutton" onclick="ChangePage('DarkMail | Write','tor');SetMailWriteVals(id,'Hi i have a problem i think you could take care of');">CONTACT</button>
                             </div>
                         </div>
                     </div>
                     <div class="footer">
-                        <p>HitmenForHire - FOXRP</p>
+                        <p>HitmenForHire - WG</p>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="foot" class="cpfooter"></div>
     </container>
     <script src="./main.js" type="text/javascript"></script>
 </body>
